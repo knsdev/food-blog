@@ -64,6 +64,9 @@ img {
     align-items: center;
     padding: 0.5rem;
 
+    /* extra styling */
+    /* box-shadow: 0 5px 5px -5px rgb(92, 92, 92); */
+
     li {
       list-style-type: none;
       flex-grow: 0;
