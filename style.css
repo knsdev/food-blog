@@ -10,6 +10,12 @@ body {
   font-family: "Funnel Sans", Arial, Helvetica, sans-serif;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .navbar-top {
   display: flex;
   justify-content: space-between;
@@ -73,5 +79,30 @@ body {
         /* padding: 0.4rem; */
       }
     }
+  }
+}
+
+.food-item-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 300px);
+  width: 80%;
+  gap: 0.7rem;
+  margin: 2rem auto;
+}
+
+.food-item {
+  position: relative;
+
+  p {
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    color: white;
+    padding: 0.5rem 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
   }
 }
