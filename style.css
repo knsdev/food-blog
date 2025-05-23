@@ -55,7 +55,6 @@ body {
       background-color: beige;
       border: 1px solid rgba(0, 0, 0, 0.5);
       border-radius: 0.2rem;
-      padding: 0.4rem;
 
       a {
         text-decoration: none;
@@ -64,6 +63,7 @@ body {
         display: inline-block;
         width: 100%;
         text-align: center;
+        padding: 0.4rem;
       }
     }
   }
