@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap");
 
+:root {
+  --foot-item-height: 18.75rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -85,7 +89,8 @@ img {
 .food-item-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 300px);
+  grid-template-rows: repeat(3, minmax(0, var(--foot-item-height)));
+  grid-auto-rows: minmax(0, var(--foot-item-height));
   width: 80%;
   gap: 0.7rem;
   margin: 2rem auto;
@@ -93,6 +98,7 @@ img {
 
 .food-item {
   position: relative;
+  box-shadow: 0 0 5px rgb(92, 92, 92);
 
   p {
     position: absolute;
@@ -104,5 +110,11 @@ img {
     padding: 0.5rem 0;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .food-item-container {
+    grid-template-columns: 1fr;
   }
 }
