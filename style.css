@@ -2,6 +2,8 @@
 
 :root {
   --foot-item-height: 18.75rem;
+  --text-color-primary: black;
+  --text-color-secondary: white;
 }
 
 * {
@@ -12,6 +14,7 @@
 
 body {
   font-family: "Funnel Sans", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
   background-color: white;
 }
 
@@ -25,25 +28,29 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   padding: 1rem 1rem;
 
   .logo {
     font-family: "Pacifico", Arial, Helvetica, sans-serif;
     font-size: 2rem;
     line-height: 2.25rem;
+    text-wrap: nowrap;
     text-decoration: none;
-    color: black;
+    color: var(--text-color-primary);
   }
 
-  li {
-    display: inline;
-    list-style-type: none;
-    margin-left: 1.5rem;
+  ul {
+    li {
+      display: inline;
+      list-style-type: none;
+      margin-left: 1.5rem;
 
-    a {
-      font-size: 1rem;
-      text-decoration: none;
-      color: black;
+      a {
+        font-size: 1rem;
+        text-decoration: none;
+        color: var(--text-color-primary);
+      }
     }
   }
 }
@@ -73,7 +80,7 @@ img {
 
       a {
         text-decoration: none;
-        color: black;
+        color: var(--text-color-primary);
         font-size: 1.1rem;
         display: inline-block;
         width: 100%;
@@ -106,7 +113,7 @@ img {
     bottom: 0%;
     transform: translate(-50%, 0);
     text-align: center;
-    color: white;
+    color: var(--text-color-secondary);
     padding: 0.5rem 0;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -121,19 +128,19 @@ footer {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 5rem;
     padding-bottom: 1rem;
 
     li {
       list-style-type: none;
       flex-grow: 0;
       flex-shrink: 1;
-      color: white;
+      color: var(--text-color-secondary);
       font-size: 1rem;
 
       a {
         text-decoration: none;
-        color: white;
+        color: var(--text-color-secondary);
 
         .fa-brands {
           font-size: 1.5rem;
@@ -142,8 +149,12 @@ footer {
     }
   }
 
+  .social-links {
+    gap: 1rem;
+  }
+
   p {
-    color: white;
+    color: var(--text-color-secondary);
     text-align: center;
   }
 }
@@ -153,11 +164,69 @@ footer {
   .food-item-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  footer {
+    ul {
+      gap: 2rem;
+    }
+  }
 }
 
 /* mobile */
 @media (max-width: 480px) {
+  .navbar-top {
+    .logo {
+      font-size: 1.25rem;
+      line-height: 1.25rem;
+    }
+
+    ul {
+      li {
+        margin-left: 0.5rem;
+
+        a {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+
+  .navbar-bottom {
+    ul {
+      padding: 0;
+
+      li {
+        a {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+
   .food-item-container {
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(0, 11rem));
+    grid-auto-rows: minmax(0, 11rem);
+    margin: 1rem auto;
+  }
+
+  footer {
+    ul {
+      gap: 1rem;
+
+      li {
+        font-size: 0.8rem;
+
+        a {
+          .fa-brands {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
   }
 }
