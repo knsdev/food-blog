@@ -58,7 +58,6 @@ img {
     padding: 0.5rem;
 
     li {
-      display: inline;
       list-style-type: none;
       flex-grow: 0;
       flex-shrink: 1;
@@ -111,6 +110,41 @@ img {
     padding: 0.5rem 0;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
+  }
+}
+
+footer {
+  background-color: black;
+  padding: 0.5rem 0;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-bottom: 1rem;
+
+    li {
+      list-style-type: none;
+      flex-grow: 0;
+      flex-shrink: 1;
+      color: white;
+      font-size: 1rem;
+
+      a {
+        text-decoration: none;
+        color: white;
+
+        .fa-brands {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  p {
+    color: white;
+    text-align: center;
   }
 }
 
