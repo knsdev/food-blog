@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap");
 
 :root {
-  --foot-item-height: 18.75rem;
+  --food-item-height: 18.75rem;
   --text-color-primary: black;
   --text-color-secondary: white;
 }
@@ -109,8 +109,8 @@ img {
 .food-item-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, minmax(0, var(--foot-item-height)));
-  grid-auto-rows: minmax(0, var(--foot-item-height));
+  grid-template-rows: repeat(3, minmax(0, var(--food-item-height)));
+  grid-auto-rows: minmax(0, var(--food-item-height));
   width: 80%;
   gap: 0.7rem;
   margin: 2rem auto;
