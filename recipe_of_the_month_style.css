@@ -34,7 +34,8 @@
       margin: 1rem auto;
     }
 
-    ul {
+    ul,
+    ol {
       padding-left: 1rem;
     }
 
