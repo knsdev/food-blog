@@ -2,6 +2,8 @@
 
 My first exam project at CodeFactory, built using only HTML and CSS. It’s a responsive multi-page food blog showcasing core web layout and styling skills.
 
+[Live Demo](https://kim.codefactory.live/food-blog/)
+
 ## Features
 
 - Responsive design with media queries (mobile, tablet)
